@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE INHERITANCE — A Serialized Novel</title>
+
+<!-- SEO -->
+<meta name="description" content="A rifle changes hands nine times across sixty years and seven wars — Korea, Vietnam, Cambodia, Afghanistan, Sudan, Libya, Liberia, Nigeria — before it ends a family on a yacht in the Gulf of Guinea. A serialized novel, one chapter weekly.">
+<meta name="author" content="niyid">
+<meta name="keywords" content="fiction, novel, screenplay, war fiction, serialized fiction, THE INHERITANCE">
+
+<!-- Open Graph -->
+<meta property="og:type" content="book">
+<meta property="og:title" content="THE INHERITANCE — A Serialized Novel">
+<meta property="og:description" content="Nine owners. Sixty years. Seven wars. One rifle. A serialized novel, one chapter posted weekly.">
+<meta property="og:site_name" content="THE INHERITANCE">
+<meta property="article:author" content="https://github.com/niyid">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE INHERITANCE — A Serialized Novel">
+<meta name="twitter:description" content="Nine owners. Sixty years. Seven wars. One rifle. A serialized novel, one chapter posted weekly.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://niyid.github.io/guntrip/index.html">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg:           #06080d;
+    --surface:      #0c1018;
+    --panel:        #101520;
+    --border:       #1c2433;
+    --border-hi:    #2a3a52;
+    --emerald:      #10b981;
+    --emerald-dim:  rgba(16,185,129,0.15);
+    --amber:        #f59e0b;
+    --amber-dim:    rgba(245,158,11,0.12);
+    --red:          #ef4444;
+    --red-dim:      rgba(239,68,68,0.12);
+    --blue:         #60a5fa;
+    --blue-dim:     rgba(96,165,250,0.12);
+    --violet:       #a78bfa;
+    --text:         #e2e8f0;
+    --muted:        #64748b;
+    --muted-hi:     #94a3b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(16,185,129,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,185,129,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+
+  /* ─── HERO ───────────────────────────────────────────────────── */
+  .hero {
+    padding: 88px 0 64px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 56px;
+    position: relative;
+    animation: fadeSlideUp 0.7s ease both;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--emerald);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 7vw, 76px);
+    font-weight: 900;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+
+  h1 .italic { font-style: italic; }
+  h1 .accent { color: var(--emerald); }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta .sep { color: var(--border-hi); }
+
+  .hero-lead {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--muted-hi);
+    line-height: 1.7;
+    max-width: 640px;
+    border-left: 3px solid var(--emerald);
+    padding-left: 20px;
+    margin-bottom: 32px;
+  }
+
+  .route-map {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .route-map .stop { color: var(--emerald-dim); }
+  .route-map .stop.hi { color: var(--emerald); }
+  .route-map .arrow { color: var(--border-hi); }
+
+  /* ─── SECTION STRUCTURE ──────────────────────────────────────── */
+  section { margin-bottom: 56px; animation: fadeSlideUp 0.6s ease both; }
+
+  .section-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-kicker::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+  }
+
+  p { margin-bottom: 18px; color: var(--muted-hi); }
+  p:last-child { margin-bottom: 0; }
+
+  strong { color: var(--text); font-weight: 500; }
+  em { font-style: italic; }
+
+  a { color: var(--emerald); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ─── CHAPTER LIST ───────────────────────────────────────────── */
+  .chapter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .chapter-card {
+    display: grid;
+    grid-template-columns: 64px 1fr auto;
+    align-items: center;
+    gap: 20px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chapter-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+    background: var(--border);
+  }
+
+  .chapter-card.available {
+    cursor: pointer;
+  }
+
+  .chapter-card.available::before { background: var(--emerald); }
+  .chapter-card.available:hover { border-color: var(--border-hi); background: #131926; }
+
+  .chapter-card.locked {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  .chapter-week {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .chapter-week .week-num {
+    display: block;
+    font-size: 22px;
+    color: var(--emerald);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .chapter-card.locked .chapter-week .week-num { color: var(--muted); }
+
+  .chapter-info .chapter-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+
+  .chapter-info .chapter-setting {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .chapter-status {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .chapter-status.read { color: var(--emerald); }
+  .chapter-status.soon { color: var(--muted); }
+
+  /* ─── ABOUT CALLOUT ──────────────────────────────────────────── */
+  .callout {
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 0;
+    background: var(--blue-dim);
+    border: 1px solid rgba(96,165,250,0.25);
+  }
+
+  .callout p { font-size: 14.5px; color: var(--muted-hi); }
+  .callout p:last-child { margin: 0; }
+
+  /* ─── FOOTER ─────────────────────────────────────────────────── */
+  .article-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-left p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin: 0 0 6px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--emerald);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: background 0.2s;
+  }
+
+  .footer-link:hover { background: rgba(16,185,129,0.22); text-decoration: none; }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  section:nth-of-type(2) { animation-delay: 0.1s; }
+  section:nth-of-type(3) { animation-delay: 0.15s; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 16px 64px; }
+    .hero { padding: 56px 0 40px; }
+    .chapter-card { grid-template-columns: 44px 1fr; }
+    .chapter-status { grid-column: 1 / -1; margin-top: 4px; }
+    .article-footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <div class="hero-eyebrow">A Serialized Novel · New Chapter Weekly</div>
+
+    <h1>
+      <span class="italic">The</span> <span class="accent">Inheritance</span>
+    </h1>
+
+    <div class="hero-meta">
+      <span>📖 7 chapters</span>
+      <span class="sep">·</span>
+      <span>🌍 7 wars</span>
+      <span class="sep">·</span>
+      <span>🔫 1 rifle</span>
+      <span class="sep">·</span>
+      <span>⏳ 60 years</span>
+    </div>
+
+    <p class="hero-lead">
+      A rifle changes hands nine times across sixty years and seven wars before it ends a family
+      on a yacht in the Gulf of Guinea. The men who kill them have no idea the gun's first shot,
+      sixty years earlier, was fired for the grandfather of the man they just killed. No character
+      in this story is ever named — in war, the story argues, a name is the first thing you lose.
+    </p>
+
+    <div class="route-map">
+      <span class="stop hi">Korea '53</span><span class="arrow">→</span>
+      <span class="stop">Vietnam</span><span class="arrow">→</span>
+      <span class="stop">Cambodia</span><span class="arrow">→</span>
+      <span class="stop">Afghanistan</span><span class="arrow">→</span>
+      <span class="stop">Sudan</span><span class="arrow">→</span>
+      <span class="stop">Libya</span><span class="arrow">→</span>
+      <span class="stop">Liberia</span><span class="arrow">→</span>
+      <span class="stop">Nigeria</span>
+    </div>
+  </header>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section>
+    <div class="callout">
+      <p>
+        <strong style="display:block;margin-bottom:6px;color:var(--text);">About this project —</strong>
+        THE INHERITANCE exists as both a novel and a screenplay. Chapters post here in a mix of
+        story order and standalone highlights — check each entry's week number for the intended
+        reading sequence. New chapter every week.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPTER LIST ═══ -->
+  <section>
+    <div class="section-kicker">Chapters</div>
+
+    <div class="chapter-list">
+
+      <a class="chapter-card available" href="01-the-sale.html">
+        <div class="chapter-week"><span class="week-num">01</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">The Sale</div>
+          <div class="chapter-setting">Prologue · Korea, 1953</div>
+        </div>
+        <div class="chapter-status read">Read now →</div>
+      </a>
+
+      <a class="chapter-card available" href="02-vietnam.html">
+        <div class="chapter-week"><span class="week-num">02</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part One: Vietnam</div>
+          <div class="chapter-setting">1965–1968</div>
+        </div>
+        <div class="chapter-status read">Read now →</div>
+      </a>
+
+      <div class="chapter-card locked">
+        <div class="chapter-week"><span class="week-num">03</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part Five: Libya</div>
+          <div class="chapter-setting">2011 · stands alone — start here if you only read one</div>
+        </div>
+        <div class="chapter-status soon">Coming soon</div>
+      </div>
+
+      <div class="chapter-card locked">
+        <div class="chapter-week"><span class="week-num">04</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part Two: Cambodia</div>
+          <div class="chapter-setting">1975–1979</div>
+        </div>
+        <div class="chapter-status soon">Coming soon</div>
+      </div>
+
+      <div class="chapter-card locked">
+        <div class="chapter-week"><span class="week-num">05</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part Three: Afghanistan</div>
+          <div class="chapter-setting">1980s</div>
+        </div>
+        <div class="chapter-status soon">Coming soon</div>
+      </div>
+
+      <div class="chapter-card locked">
+        <div class="chapter-week"><span class="week-num">06</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part Four &amp; Six: Sudan / Liberia</div>
+          <div class="chapter-setting">1990s–2003 · two ways a rifle changes hands without a death</div>
+        </div>
+        <div class="chapter-status soon">Coming soon</div>
+      </div>
+
+      <div class="chapter-card locked">
+        <div class="chapter-week"><span class="week-num">07</span>Week</div>
+        <div class="chapter-info">
+          <div class="chapter-title">Part Seven &amp; Epilogue: Nigeria</div>
+          <div class="chapter-setting">2000s–present · where it was always headed</div>
+        </div>
+        <div class="chapter-status soon">Coming soon</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="article-footer">
+    <div class="footer-left">
+      <p>THE INHERITANCE</p>
+      <p style="color:var(--muted-hi)">A serialized novel — new chapter weekly</p>
+    </div>
+    <div class="footer-links">
+      <a class="footer-link" href="https://github.com/niyid/guntrip" target="_blank">↗ GitHub repo</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

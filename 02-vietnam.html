@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE INHERITANCE — Part One: Vietnam</title>
+
+<!-- SEO -->
+<meta name="description" content="The rifle reaches its second owner — a Vietnamese farmer conscripted into a war he keeps trying, and failing, to treat as a season rather than the weather. Chapter 2 of THE INHERITANCE.">
+<meta name="author" content="niyid">
+<meta name="keywords" content="fiction, novel, screenplay, war fiction, serialized fiction, THE INHERITANCE, Vietnam War">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="THE INHERITANCE — Part One: Vietnam">
+<meta property="og:description" content="The rifle's second owner is a farmer conscripted into a war he keeps trying, and failing, to treat as a season rather than the weather. Chapter 2 of 7.">
+<meta property="og:site_name" content="THE INHERITANCE">
+<meta property="article:author" content="https://github.com/niyid">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE INHERITANCE — Part One: Vietnam">
+<meta name="twitter:description" content="The second owner. A farmer, a household, an ordinary morning that doesn't stay ordinary. Chapter 2 of THE INHERITANCE.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://niyid.github.io/guntrip/02-vietnam.html">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg:           #06080d;
+    --surface:      #0c1018;
+    --panel:        #101520;
+    --border:       #1c2433;
+    --border-hi:    #2a3a52;
+    --emerald:      #10b981;
+    --emerald-dim:  rgba(16,185,129,0.15);
+    --amber:        #f59e0b;
+    --amber-dim:    rgba(245,158,11,0.12);
+    --red:          #ef4444;
+    --red-dim:      rgba(239,68,68,0.12);
+    --blue:         #60a5fa;
+    --blue-dim:     rgba(96,165,250,0.12);
+    --violet:       #a78bfa;
+    --text:         #e2e8f0;
+    --muted:        #64748b;
+    --muted-hi:     #94a3b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(16,185,129,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,185,129,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+
+  /* ─── HERO ───────────────────────────────────────────────────── */
+  .hero {
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 64px;
+    position: relative;
+    animation: fadeSlideUp 0.7s ease both;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--emerald);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+
+  h1 .accent { color: var(--emerald); }
+  h1 .italic { font-style: italic; }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta .sep { color: var(--border-hi); }
+
+  .hero-lead {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--muted-hi);
+    line-height: 1.7;
+    max-width: 680px;
+    border-left: 3px solid var(--emerald);
+    padding-left: 20px;
+  }
+
+  .week-tracker {
+    display: flex;
+    gap: 6px;
+    margin: 32px 0 0;
+  }
+
+  .week-dot {
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+  }
+
+  .week-dot.done { background: var(--emerald); }
+  .week-dot.current { background: var(--emerald); box-shadow: 0 0 8px var(--emerald); }
+
+  /* ─── SECTION STRUCTURE ──────────────────────────────────────── */
+  section { margin-bottom: 56px; animation: fadeSlideUp 0.6s ease both; }
+
+  .section-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-kicker::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  p { margin-bottom: 20px; color: var(--muted-hi); font-size: 16.5px; }
+  p:last-child { margin-bottom: 0; }
+
+  .story-text p { color: var(--text); }
+
+  strong { color: var(--text); font-weight: 500; }
+  em { font-style: italic; }
+
+  a { color: var(--emerald); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .scene-break {
+    text-align: center;
+    color: var(--emerald);
+    letter-spacing: 0.4em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    margin: 40px 0;
+  }
+
+  .pull-quote {
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16,185,129,0.25);
+    border-left: 4px solid var(--emerald);
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 0;
+  }
+
+  .ledger-card {
+    background: var(--panel);
+    border: 1px solid var(--border-hi);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .ledger-card .ledger-num {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .ledger-card .ledger-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  .callout {
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0;
+    background: var(--blue-dim);
+    border: 1px solid rgba(96,165,250,0.25);
+  }
+
+  .callout p { font-size: 13.5px; margin: 0; line-height: 1.6; color: var(--muted-hi); }
+
+  .prev-next-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 48px 0 0;
+  }
+
+  .nav-card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .nav-card:hover { border-color: var(--border-hi); text-decoration: none; }
+
+  .nav-card .nav-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 8px;
+  }
+
+  .nav-card .nav-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  @media (max-width: 600px) {
+    .prev-next-nav { grid-template-columns: 1fr; }
+  }
+
+  .article-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-left p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin: 0 0 6px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--emerald);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: background 0.2s;
+  }
+
+  .footer-link:hover { background: rgba(16,185,129,0.22); text-decoration: none; }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  section:nth-of-type(2) { animation-delay: 0.1s; }
+  section:nth-of-type(3) { animation-delay: 0.15s; }
+  section:nth-of-type(4) { animation-delay: 0.2s; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 16px 64px; }
+    .hero { padding: 48px 0 40px; }
+    .article-footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <div class="hero-eyebrow">Serialized Novel · Week 2 of 7</div>
+
+    <h1>
+      <span class="italic">The Inheritance</span><br>
+      <span class="accent">Part One: Vietnam</span>
+    </h1>
+
+    <div class="hero-meta">
+      <span>📖 Chapter 2</span>
+      <span class="sep">·</span>
+      <span>📍 Quảng Ngãi Province, 1965–1968</span>
+      <span class="sep">·</span>
+      <span>⏱ 7 min read</span>
+    </div>
+
+    <p class="hero-lead">
+      The rifle reaches its second owner — a farmer conscripted into a war he keeps trying, and
+      failing, to treat as a season rather than the weather. This is the chapter that convinced us
+      the "no names" rule was right for the whole project: the second you stop naming people, you
+      start noticing everything else about them instead.
+    </p>
+
+    <div class="week-tracker" title="Week 2 of 7">
+      <div class="week-dot done"></div>
+      <div class="week-dot current"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+    </div>
+  </header>
+
+  <!-- ═══ SERIES NOTE ═══ -->
+  <section>
+    <div class="callout">
+      <p>
+        <strong style="display:block;margin-bottom:4px;color:var(--text);">Catching up? —</strong>
+        This is Chapter 2 of THE INHERITANCE, a serialized novel following one rifle across sixty
+        years and seven wars. Start from <a href="01-the-sale.html">Chapter 1: The Sale</a> if
+        you're new here, or see <a href="index.html">all chapters</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPTER TEXT ═══ -->
+  <section class="story-text">
+    <div class="section-kicker">Part One — Vietnam, 1965–1968</div>
+
+    <p>The Militiaman had been a farmer for longer than he had been anything else, and he intended,
+    in the private ledger he kept of what he still believed about his own life, to go back to
+    being only that once this was over. He did not examine too closely what "over" meant, or when
+    it might arrive, because both questions belonged to a category of thinking that got men killed
+    faster than any ambush did — the thinking that assumed there was a clean seam between the war
+    and the life on either side of it, when in fact the war had long since stopped being a season
+    and become the weather.</p>
+
+    <p>The rifle came to him at dawn, in mist thick enough that the cadre officer walking the line
+    seemed to materialize rather than approach. It was handed to him the way a tool is handed to a
+    man already expected to know its use — no ceremony, no instruction. He turned it once in his
+    hands, felt the mismatched stock under his palm, cool and slightly rougher on one side than
+    the other where an old repair hadn't quite matched grain to grain, and said nothing, because
+    there was nothing to say that the weight of it hadn't already said for him.</p>
+
+    <p>That night he leaned it in the corner of his one-room house the way he leaned the hoe, the
+    coil of rope — an object with a job, no more sacred than any other. His wife ladled thin
+    porridge into two bowls without looking at it, though he noticed her not-looking, which was its
+    own kind of looking. Their son slept in the hammock behind them, six years old and unbothered
+    by the artillery grumbling somewhere over the tree line, because he had never known a version
+    of the night that didn't grumble.</p>
+
+    <p>They ate in silence. It was not an unhappy silence. It was the silence of two people
+    conserving a resource neither of them could have named, though if pressed, the Militiaman might
+    have called it hope, and might have been embarrassed to call it that, because hope had come to
+    feel like a luxury item best kept out of sight, the way you didn't wear your good clothes into
+    a rice paddy.</p>
+
+    <p>The tunnel came later — a different kind of dark, close and packed with the smell of wet
+    earth and cordite. He shared a cigarette with a young American whose wrists were bound and
+    whose eyes, in the brief flare of the match, held an expression the Militiaman recognized
+    without wanting to: not fear exactly, but the particular exhaustion of a man doing arithmetic
+    on how many more days he had left, and coming up, each time, with a number he didn't trust. The
+    Militiaman held the cigarette to the boy's lips because the boy's hands couldn't reach it
+    themselves, and neither of them said anything, because there was, again, nothing that needed
+    saying. Outside, rain began finding its way into the tunnel mouth, one drop landing in the same
+    low spot again and again, and both men watched it fall for far longer than made any tactical
+    sense, because watching it fall was, for those minutes, the only thing either of them was
+    required to do.</p>
+
+    <div class="scene-break">◆ ◆ ◆</div>
+
+    <p>Weeks passed the way weeks pass when a person has stopped counting them for any purpose
+    beyond survival. There was a morning — ordinary, unremarkable, the kind of morning that later
+    becomes unbearable to remember precisely because nothing in it warned anyone — when the
+    Militiaman worked the paddy beside his wife, rifle slung across his back the way another man
+    might carry a hoe over his shoulder, its threat entirely absent in the daylight, folded away
+    like a knife put back in a drawer. Their son chased a duck through the shallow water, laughing
+    at nothing, at everything, at the simple fact of being six and having a duck to chase.</p>
+
+    <p>For perhaps thirty seconds, this could have been any year. It could have been no war at
+    all.</p>
+
+    <p>Then the sound arrived — not sudden, but rising, the particular whistle of something
+    enormous and very far above them, already too late to matter by the time it became audible at
+    all. He looked up. He understood, in the half-second available to him for understanding
+    anything, that there was no version of the next several seconds in which running mattered, and
+    he ran anyway, because a man's legs do not consult his understanding before they move toward
+    his family.</p>
+
+    <p>The strike arrived as light before it arrived as sound — a wall of white that swallowed the
+    paddy, the duck, the laughter, everything.</p>
+
+    <p>When the light receded into an ordinary, terrible quiet, the rifle lay half-submerged in the
+    churned water, its stock the one clean surface in a frame otherwise given over entirely to mud
+    and stillness. Nothing else in the frame moved. It would be picked up, eventually, by someone
+    else's hands, on someone else's ordinary morning.</p>
+
+    <div class="pull-quote">
+      <p>Somewhere, in a ledger no one living was keeping and everyone dead had contributed to, a
+      number that had stood at zero for twelve years began, quietly, to climb. It would not ask
+      permission to keep climbing. It never had.</p>
+    </div>
+  </section>
+
+  <!-- ═══ LEDGER CARD ═══ -->
+  <section>
+    <div class="ledger-card">
+      <div class="ledger-num">2,140 DEAD · 5,600 WOUNDED</div>
+      <div class="ledger-label">Regional total — Quảng Ngãi Province, period of circulation</div>
+    </div>
+  </section>
+
+  <!-- ═══ PREV / NEXT ═══ -->
+  <section>
+    <div class="prev-next-nav">
+      <a class="nav-card" href="01-the-sale.html">
+        <div class="nav-label">← Week 1</div>
+        <div class="nav-title">The Sale</div>
+      </a>
+      <a class="nav-card" href="03-libya.html">
+        <div class="nav-label">Week 3 →</div>
+        <div class="nav-title">Part Five: Libya</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="article-footer">
+    <div class="footer-left">
+      <p>THE INHERITANCE</p>
+      <p style="color:var(--muted-hi)">A serialized novel — new chapter weekly</p>
+    </div>
+    <div class="footer-links">
+      <a class="footer-link" href="index.html">↗ All chapters</a>
+      <a class="footer-link" href="https://github.com/niyid/guntrip" target="_blank">↗ GitHub repo</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

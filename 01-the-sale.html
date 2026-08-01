@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE INHERITANCE — Chapter 1: The Sale</title>
+
+<!-- SEO -->
+<meta name="description" content="A rifle changes hands nine times across sixty years and seven wars. Chapter 1: a Korean rail yard, 1953 — the sale that starts everything.">
+<meta name="author" content="niyid">
+<meta name="keywords" content="fiction, novel, screenplay, war fiction, serialized fiction, THE INHERITANCE">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="THE INHERITANCE — Chapter 1: The Sale">
+<meta property="og:description" content="A rifle changes hands nine times across sixty years and seven wars, before it ends a family on a yacht in the Gulf of Guinea. Chapter 1 of 7 begins in a Korean rail yard, 1953.">
+<meta property="og:site_name" content="THE INHERITANCE">
+<meta property="article:author" content="https://github.com/niyid">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="THE INHERITANCE — Chapter 1: The Sale">
+<meta name="twitter:description" content="Nine owners. Sixty years. Seven wars. One rifle. Chapter 1 begins in a Korean rail yard, 1953.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://niyid.github.io/guntrip/01-the-sale.html">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg:           #06080d;
+    --surface:      #0c1018;
+    --panel:        #101520;
+    --border:       #1c2433;
+    --border-hi:    #2a3a52;
+    --emerald:      #10b981;
+    --emerald-dim:  rgba(16,185,129,0.15);
+    --amber:        #f59e0b;
+    --amber-dim:    rgba(245,158,11,0.12);
+    --red:          #ef4444;
+    --red-dim:      rgba(239,68,68,0.12);
+    --blue:         #60a5fa;
+    --blue-dim:     rgba(96,165,250,0.12);
+    --violet:       #a78bfa;
+    --text:         #e2e8f0;
+    --muted:        #64748b;
+    --muted-hi:     #94a3b8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* ─── NOISE OVERLAY ─────────────────────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(16,185,129,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16,185,129,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ─── LAYOUT ─────────────────────────────────────────────────── */
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px 96px;
+  }
+
+  /* ─── HERO ───────────────────────────────────────────────────── */
+  .hero {
+    padding: 80px 0 64px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 64px;
+    position: relative;
+    animation: fadeSlideUp 0.7s ease both;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 28px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--emerald);
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
+  }
+
+  h1 .accent { color: var(--emerald); }
+  h1 .italic { font-style: italic; }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta .sep { color: var(--border-hi); }
+
+  .hero-lead {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--muted-hi);
+    line-height: 1.7;
+    max-width: 680px;
+    border-left: 3px solid var(--emerald);
+    padding-left: 20px;
+  }
+
+  /* ─── PROGRESS TRACKER ───────────────────────────────────────── */
+  .week-tracker {
+    display: flex;
+    gap: 6px;
+    margin: 32px 0 0;
+  }
+
+  .week-dot {
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+  }
+
+  .week-dot.done { background: var(--emerald); }
+  .week-dot.current { background: var(--emerald); box-shadow: 0 0 8px var(--emerald); }
+
+  /* ─── SECTION STRUCTURE ──────────────────────────────────────── */
+  section { margin-bottom: 56px; animation: fadeSlideUp 0.6s ease both; }
+
+  .section-kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-kicker::after {
+    content: '';
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 3.5vw, 34px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+  }
+
+  p { margin-bottom: 20px; color: var(--muted-hi); font-size: 16.5px; }
+  p:last-child { margin-bottom: 0; }
+
+  .story-text p { color: var(--text); }
+
+  strong { color: var(--text); font-weight: 500; }
+  em { font-style: italic; }
+
+  a { color: var(--emerald); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ─── SCENE BREAK ────────────────────────────────────────────── */
+  .scene-break {
+    text-align: center;
+    color: var(--emerald);
+    letter-spacing: 0.4em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    margin: 40px 0;
+  }
+
+  /* ─── PULL QUOTE / LEDGER CARD ───────────────────────────────── */
+  .pull-quote {
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16,185,129,0.25);
+    border-left: 4px solid var(--emerald);
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px;
+    margin: 32px 0;
+  }
+
+  .pull-quote p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 0;
+  }
+
+  .ledger-card {
+    background: var(--panel);
+    border: 1px solid var(--border-hi);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .ledger-card .ledger-num {
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .ledger-card .ledger-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+
+  /* ─── CALLOUT (series note) ──────────────────────────────────── */
+  .callout {
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 24px 0;
+    background: var(--blue-dim);
+    border: 1px solid rgba(96,165,250,0.25);
+  }
+
+  .callout p { font-size: 13.5px; margin: 0; line-height: 1.6; color: var(--muted-hi); }
+
+  /* ─── NEXT CHAPTER NAV ───────────────────────────────────────── */
+  .next-chapter {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 48px 0 0;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .next-chapter:hover { border-color: var(--border-hi); text-decoration: none; }
+
+  .next-chapter .next-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--emerald);
+    margin-bottom: 8px;
+  }
+
+  .next-chapter .next-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* ─── FOOTER ─────────────────────────────────────────────────── */
+  .article-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-left p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin: 0 0 6px;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--emerald-dim);
+    border: 1px solid rgba(16,185,129,0.3);
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--emerald);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: background 0.2s;
+  }
+
+  .footer-link:hover { background: rgba(16,185,129,0.22); text-decoration: none; }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  section:nth-of-type(2) { animation-delay: 0.1s; }
+  section:nth-of-type(3) { animation-delay: 0.15s; }
+  section:nth-of-type(4) { animation-delay: 0.2s; }
+
+  @media (max-width: 600px) {
+    .container { padding: 0 16px 64px; }
+    .hero { padding: 48px 0 40px; }
+    .article-footer { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ═══ HERO ═══ -->
+  <header class="hero">
+    <div class="hero-eyebrow">Serialized Novel · Week 1 of 7</div>
+
+    <h1>
+      <span class="italic">The Inheritance</span><br>
+      <span class="accent">Chapter 1: The Sale</span>
+    </h1>
+
+    <div class="hero-meta">
+      <span>📖 Prologue</span>
+      <span class="sep">·</span>
+      <span>📍 Korea, 1953</span>
+      <span class="sep">·</span>
+      <span>⏱ 6 min read</span>
+    </div>
+
+    <p class="hero-lead">
+      A rifle changes hands nine times across sixty years and seven wars — Korea, Vietnam,
+      Cambodia, Afghanistan, Sudan, Libya, Liberia, Nigeria — before it ends a family on a yacht
+      in the Gulf of Guinea. No character in this story is ever named. This is where it begins.
+    </p>
+
+    <div class="week-tracker" title="Week 1 of 7">
+      <div class="week-dot current"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+      <div class="week-dot"></div>
+    </div>
+  </header>
+
+  <!-- ═══ SERIES NOTE ═══ -->
+  <section>
+    <div class="callout">
+      <p>
+        <strong style="display:block;margin-bottom:4px;color:var(--text);">About this series —</strong>
+        THE INHERITANCE is told in seven parts, each following a different owner of the same
+        rifle. No one in it is ever named — in war, the story argues, a name is the first thing
+        you lose. A new chapter posts here weekly.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ CHAPTER TEXT ═══ -->
+  <section class="story-text">
+    <div class="section-kicker">Prologue — The Sale</div>
+
+    <p>The kestrel had been working the same column of air above the collapsed signal tower for
+    eleven minutes. The Broker knew this because he had been counting, the way he counted most
+    things now — cartridges, days, the diminishing number of men in the district who still called
+    him by a rank that no longer existed. Eleven minutes was a long time for a bird to hold one
+    shape of sky. He wondered, without much interest, what it had found up there worth staying for.</p>
+
+    <p>Behind him, the crate sat open on the flatbed, rifles nested in straw like something being
+    kept warm rather than something built to end warmth in other people. Sixty of them. A hundred,
+    if you counted the ones already loose in the district, passed hand to hand since the spring in
+    trades the quartermaster's office pretended not to know about. He had stopped thinking of them
+    as separate objects months ago. They were closer to a single fact, repeated: metal, a stock of
+    two different woods where an early repair hadn't matched, a serial number filed close to
+    unreadable by whoever owned it before the war made ownership a formality nobody enforced.</p>
+
+    <p>He heard the buyer before he saw him — the particular unhurried scrape of city shoes on
+    gravel that had never been broken to a road like this one. When the man came around the
+    wrecked signal hut, his coat was too clean for the setting, the kind of clean that meant he'd
+    changed somewhere close by rather than traveled far in it. The Broker had met a dozen men like
+    him since the armistice talks began. They all had the same coat, more or less. Different
+    tailors, same instinct: dress for the meeting you're hoping to have, not the one you're
+    standing in.</p>
+
+    <p>Neither man said anything for a while. This was not unfriendliness. It was economy. Words
+    cost something even here, maybe especially here, where everything else had become so cheap
+    that a man's name was worth less than the crate he was selling.</p>
+
+    <p>The Broker lifted one rifle out of the straw — the one with the mismatched stock, though he
+    couldn't have told you why his hand went to that one instead of any other, except that his
+    hands had stopped consulting him about small decisions a long time ago — and racked the bolt
+    with the flat, unceremonious motion of a man checking a fence line. He walked six paces to the
+    collapsed wall of what had once been a ticket office, raised the rifle, and fired three rounds
+    into the brick without any particular aim. The reports rolled out over the empty rail yard and
+    came back once, thin, off a hillside that had no business still standing after what had
+    happened to everything around it.</p>
+
+    <p>He set the rifle down across the crate. Waited.</p>
+
+    <p>The buyer nodded. It was the kind of nod that had already decided everything before the
+    demonstration started; the shots were a formality too, like the coat.</p>
+
+    <p>Money changed hands — a thick roll of a currency the Broker had watched lose a third of its
+    worth in the eight months since he'd started keeping this particular ledger, and would likely
+    lose the rest of within five years, once the armistice held and the men who'd been fighting
+    over its value went home to find out what they'd actually been trading it for. Neither of them
+    said this aloud. There was no need. Every man standing in a rail yard in 1953 already knew
+    what money from a war was worth once the war stopped needing it.</p>
+
+    <p>While the workers hauled the crate up onto the flatbed — two men to a corner, grunting, the
+    straw spilling out through the slats — the Broker reached into his breast pocket and took out
+    a photograph. He didn't examine it, exactly. He held it the way you hold something you've
+    already memorized, checking less for the image than for the fact of it still being there. A
+    woman. A child, small enough to still be mostly an idea of a child rather than a person, held
+    on the woman's hip in front of a house that no longer existed in the form it had been
+    photographed in — the Broker knew this the way he knew most things about his own life now,
+    secondhand, from other people's reports, because he had not been back to see it himself in
+    three years and had stopped believing the reports were still describing anything real.</p>
+
+    <p>He looked at it for the length of one held breath. Put it away before the buyer, still
+    watching the crate load, could ask what it was, though the buyer would not have asked. Nobody
+    asked anymore. That was its own kind of mercy, or its own kind of erasure — the Broker had
+    never decided which, and had mostly stopped trying to.</p>
+
+    <p>The truck's engine caught. The buyer climbed into the cab without a farewell — there was
+    nothing left to say that either of them would have wanted witnessed — and the flatbed pulled
+    away down the ruined siding toward the crane at the port, where the crate would become cargo,
+    and the cargo would become inventory, and the inventory would become, eventually, whatever it
+    was that a hundred rifles became once they left the hands of the men who had made the decision
+    to sell them and entered the hands of men who had made no decision at all except to be
+    standing somewhere a rifle was being handed out.</p>
+
+    <p>The Broker lit a cigarette. He did not watch the truck long. There was, he had found, very
+    little to learn from watching something leave that you couldn't learn faster by simply turning
+    around.</p>
+
+    <p>He turned around.</p>
+
+    <p>Behind him, the kestrel had finally moved on. He hadn't noticed when.</p>
+
+    <div class="scene-break">◆ ◆ ◆</div>
+
+    <p>Nothing survives contact with a war the way it entered it. Not a man, not a name, not —
+    though this would take sixty years and seven wars for anyone to prove, and even then only to
+    an audience that never got introduced to a single one of the people it happened to — the truth
+    of who a weapon has been aimed at, and why, and on whose behalf, and what it cost the man
+    standing behind it to keep his hand from shaking.</p>
+
+    <p>The rifle with the mismatched stock left the rail yard that afternoon and did not return.
+    It would cross into a jungle it had no name for, then a paddy field, then a killing field with
+    a name so ordinary — a road junction, a district capital — that no one involved in choosing it
+    thought of it as historic while it was happening. It would be taught to a boy by firelight as
+    an act of love. It would be handed back for a sack of flour by another boy who had already
+    stopped being able to tell the difference between the two. It would be traded for its own
+    ammunition, worth more empty than full, in a transaction that had nothing to do with anyone
+    dying that day. It would be surrendered by a child who would not let go of it, in the end, for
+    reasons that had very little to do with the rifle and everything to do with the fact that it
+    was the only thing in years that had unambiguously, uncontestedly, been his.</p>
+
+    <p>It would end, eventually, in the hand of a man boarding a boat in the dark, off a coast the
+    Broker never once in his life had reason to think about, checking the action out of a habit he
+    could not have told you the origin of — a small motion, hand to chest, as if reaching for
+    something kept there. He would have no memory of where the habit came from. He would have no
+    way of knowing that a man he never met, on a rail siding sixty years and six owners before him,
+    used to make the same motion, for the same reason, toward a photograph of a life he was no
+    longer sure was still there to go home to.</p>
+
+    <p>None of this is knowable from where the Broker stood, watching a truck disappear toward a
+    port crane on an ordinary, ruinous afternoon in 1953.</p>
+
+    <p>He finished his cigarette. Checked the manifest against the crate one more time, out of
+    habit rather than need — sixty rifles, correctly counted, correctly sold, correctly gone. Then
+    he walked back toward the depot office to begin the paperwork that would make the sale, in the
+    eyes of whichever authority still cared to keep such records, as if it had never involved a
+    human hand at all.</p>
+
+    <div class="pull-quote">
+      <p>Zero dead. Zero wounded. The ledger, wherever it was being kept, had not yet begun to
+      climb. It would not stay that way for long.</p>
+    </div>
+  </section>
+
+  <!-- ═══ LEDGER CARD ═══ -->
+  <section>
+    <div class="ledger-card">
+      <div class="ledger-num">0 DEAD · 0 WOUNDED</div>
+      <div class="ledger-label">Running total — Korea, 1953</div>
+    </div>
+  </section>
+
+  <!-- ═══ NEXT CHAPTER ═══ -->
+  <section>
+    <a class="next-chapter" href="02-vietnam.html">
+      <div class="next-label">Next — Week 2</div>
+      <div class="next-title">Part One: Vietnam →</div>
+    </a>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="article-footer">
+    <div class="footer-left">
+      <p>THE INHERITANCE</p>
+      <p style="color:var(--muted-hi)">A serialized novel — new chapter weekly</p>
+    </div>
+    <div class="footer-links">
+      <a class="footer-link" href="index.html">↗ All chapters</a>
+      <a class="footer-link" href="https://github.com/niyid/guntrip" target="_blank">↗ GitHub repo</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
